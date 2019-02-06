@@ -1,7 +1,11 @@
-query {
+query post ($id: Int!) {
   post (id: $id) {
     id
     title
     content
+    user {
+      id
+      nickname
+    }
   }
 }
