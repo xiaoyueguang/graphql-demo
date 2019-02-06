@@ -4,10 +4,15 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
     "apollo-boost": "^0.1.27",
     "apollo-server": "^2.3.2",
+    "babel-loader": "^8.0.5",
     "graphql": "^14.1.1",
     "graphql-tag": "^2.10.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
     "typescript": "^3.2.4"
   },
   "devDependencies": {
