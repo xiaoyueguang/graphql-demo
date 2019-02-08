@@ -25,8 +25,7 @@ export class Router extends React.Component {
   }
 
   addRoute () {
-    this.props.children.forEach(c => {
-      const { name, component } = c.props
+    this.props.routes.forEach(({ name, component }) => {
       this.components[name] = component
     })
   }

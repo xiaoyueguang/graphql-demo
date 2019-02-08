@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-// import Api from './api'
-import Router, { Route } from './router'
+
+import Router from './router'
 import Posts from './posts'
 import Post from './post'
+import Users from './users'
 
 class App extends React.Component {
   constructor (props) {
@@ -14,10 +15,13 @@ class App extends React.Component {
   }
   render () {
     return (
-      <Router>
-        <Route name='' component={Posts} />
-        <Route name='book' component={Post} />
-      </Router>
+      <Router
+        routes={[
+          { name: '', component: Posts },
+          { name: 'book', component: Post },
+          { name: 'users', component: Users },
+        ]}
+      />
     )
   }
 }
