@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { fetchPosts } from './api'
 import { Link } from './router'
@@ -14,25 +14,12 @@ const Post = props => {
   )
 }
 
-export default class Posts extends React.Component {
-  constructor () {
-    super()
-    this.state = {
-      posts: []
-    }
-  }
-  async componentDidMount () {
-    const { data } = await fetchPosts()
-    this.setState({
-      posts: data.posts
-    })
-  }
-  render () {
-    const posts = this.state.posts
-    return (
-      posts.map(post => (
-        <Post data={post} key={post.id} />
-      ))
-    )
-  }
+export default function Posts () {
+  const [ posts, setPosts ] = useState([])
+  fetchPosts().then(({ data }) => {
+    setPosts(data.posts)
+  })
+  return posts.map(post => (
+    <Post data={post} key={post.id} />
+  ))
 }
