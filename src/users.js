@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { fetchUsers } from './api'
 import { Link } from './router'
 
-function useUsers () {
+const useUsers = () => {
   const [ users, setUsers ] = useState([])
   if (users.length > 0) return users
   fetchUsers().then(({ data }) => {

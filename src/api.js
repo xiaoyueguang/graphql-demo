@@ -3,6 +3,7 @@ import ApolloClient from 'apollo-boost'
 import Posts from './gql/posts.gql'
 import Post from './gql/post.gql'
 import Users from './gql/users.gql'
+import User from './gql/user.gql'
 
 const client = new ApolloClient({
   uri: '//127.0.0.1:7000'
@@ -18,4 +19,8 @@ export function fetchPost (id) {
 
 export function fetchUsers () {
   return client.query({ query: Users })
+}
+
+export function fetchUser (id) {
+  return client.query({ query: User, variables: { id } })
 }

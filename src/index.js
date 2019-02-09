@@ -5,6 +5,7 @@ import Router from './router'
 import Posts from './posts'
 import Post from './post'
 import Users from './users'
+import User from './user'
 
 class App extends React.Component {
   constructor (props) {
@@ -18,8 +19,9 @@ class App extends React.Component {
       <Router
         routes={[
           { name: '', component: Posts },
-          { name: 'book', component: Post },
+          { name: 'post', component: Post },
           { name: 'users', component: Users },
+          { name: 'user', component: User },
         ]}
       />
     )
