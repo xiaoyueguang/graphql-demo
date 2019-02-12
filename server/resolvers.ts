@@ -79,7 +79,7 @@ const resolvers: IResolvers = {
         id: Posts.length + 1,
         title: <string>args.post.title,
         content: <string>args.post.content,
-        userId: 2
+        userId: <number>args.post.userId
       }
       Posts.push(post)
       return success(post)

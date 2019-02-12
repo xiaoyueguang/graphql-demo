@@ -1,0 +1,6 @@
+mutation delPost ($id: Int) {
+  delPost (id: $id) {
+    code
+    message
+  }
+}

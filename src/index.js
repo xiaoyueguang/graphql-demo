@@ -6,6 +6,7 @@ import Posts from './posts'
 import Post from './post'
 import Users from './users'
 import User from './user'
+import AddPost from './addPost'
 
 class App extends React.Component {
   constructor (props) {
@@ -22,6 +23,7 @@ class App extends React.Component {
           { name: 'post', component: Post },
           { name: 'users', component: Users },
           { name: 'user', component: User },
+          { name: 'addPost', component: AddPost },
         ]}
       />
     )

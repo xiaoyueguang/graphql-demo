@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { fetchUsers } from './api'
 import { Link } from './router'
 
-const useUsers = () => {
+export const useUsers = () => {
   const [ users, setUsers ] = useState([])
   if (users.length > 0) return users
   fetchUsers().then(({ data }) => {

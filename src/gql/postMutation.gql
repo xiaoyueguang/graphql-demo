@@ -1,0 +1,10 @@
+mutation addPost ($post: PostInput) {
+  addPost (post: $post) {
+    code
+    message
+    data {
+      title
+      content
+    }
+  }
+}
